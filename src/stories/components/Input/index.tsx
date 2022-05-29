@@ -1,5 +1,6 @@
 import { Container } from "./styles";
 import { MdErrorOutline } from "react-icons/md";
+import { HtmlHTMLAttributes } from "react";
 
 type InputProps = {
   id: string;
@@ -16,13 +17,19 @@ export const Input = ({
   focus,
   error,
   ...rest
-}: InputProps) => {
+}: InputProps & HtmlHTMLAttributes<HTMLInputElement>) => {
   return (
     <Container>
       {label && <label htmlFor={id}>{label}</label>}
 
       <div className={`box ${focus && "focus"} ${error && "error"}`}>
-        <input {...rest} id={id} type="text" placeholder={placeholder} />
+        <input
+          {...rest}
+          name="nome"
+          id={id}
+          type="text"
+          placeholder={placeholder}
+        />
       </div>
 
       {error && (

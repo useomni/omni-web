@@ -12,40 +12,40 @@ const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  label: "Button",
+  children: "Button",
   variant: "filled",
 };
 
 export const Outline = Template.bind({});
 Outline.args = {
-  label: "Outline",
+  children: "Outline",
   variant: "outline",
 };
 
 export const Disabled = Template.bind({});
 Disabled.args = {
-  label: "Disabled",
+  children: "Disabled",
   variant: "filled",
   disabled: true,
 };
 
 export const Success = Template.bind({});
 Success.args = {
-  label: "Positive",
+  children: "Positive",
   variant: "filled",
   semantic: "positive",
 };
 
 export const Error = Template.bind({});
 Error.args = {
-  label: "Negative",
+  children: "Negative",
   variant: "filled",
   semantic: "negative",
 };
 
 export const Icon = Template.bind({});
 Icon.args = {
-  label: (
+  children: (
     <>
       Add
       <IoAdd color="#f2f2fa" size={20} />

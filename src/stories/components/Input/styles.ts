@@ -20,7 +20,6 @@ export const Container = styled.div`
 
   .box {
     width: 100%;
-    padding: 0 16px;
     background: ${Colors.neutralDark90};
     border-radius: 4px;
     display: flex;
@@ -40,7 +39,7 @@ export const Container = styled.div`
 
   input {
     height: 100%;
-    padding: 8px 0;
+    padding: 8px 16px;
     flex-grow: 1;
     font-size: 1em;
     background: none;
@@ -51,6 +50,19 @@ export const Container = styled.div`
     &::placeholder {
       color: ${Colors.massiveNeutral50};
     }
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+    -webkit-text-fill-color: ${Colors.neutralLight20};
+    transition: background-color 5000s ease-in-out 0s;
   }
 
   .feedback {

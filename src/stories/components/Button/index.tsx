@@ -1,9 +1,9 @@
-import { ReactNode } from "react";
+import { HtmlHTMLAttributes, HTMLProps, ReactNode } from "react";
 import { Container } from "./styles";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 
 type ButtonProps = {
-  label?: string | ReactNode;
+  children: ReactNode | any;
   variant: "filled" | "outline";
   semantic?: "positive" | "negative" | "none";
   disabled?: boolean;
@@ -13,7 +13,7 @@ type ButtonProps = {
 };
 
 export const Button = ({
-  label = "button",
+  children = "button",
   variant = "filled",
   disabled,
   hug,
@@ -21,7 +21,7 @@ export const Button = ({
   semantic,
   loading,
   ...rest
-}: ButtonProps) => {
+}: ButtonProps & HtmlHTMLAttributes<HTMLButtonElement>) => {
   return (
     <Container
       {...rest}
@@ -37,7 +37,7 @@ export const Button = ({
           color="#E1E1E6"
         />
       ) : (
-        label
+        children
       )}
     </Container>
   );
