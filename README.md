@@ -14,7 +14,7 @@
 
 ## Overview
 
-useOmni is a Ui library used to build user interfaces for Rocket related projects. Here we provides the react components needed to build web applications
+useOmni is a Ui library used to build user interfaces for [Rocket Community](https://github.com/rocketmta) related projects. Here we provides the react components needed to build web applications
 
 The complete documentation can be found on the [storybook](https://omni-web-omega.vercel.app).
 
